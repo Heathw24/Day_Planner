@@ -45,7 +45,7 @@ textarea{
   color: #000000;
   border-top: 1px dashed #000000;
   width:10%;
-  
+  display: flex;
 }
 
 .past {
@@ -80,5 +80,9 @@ textarea{
 }
 
 .buttons {
+  align-self: center;
+}
+
+.schTime {
   align-self: center;
 }
