@@ -11,33 +11,42 @@ var hour = moment().format('H');
 console.log(hour)
 
 
-var time0 = $("9");
-var tenAm = $("10");
-var elevenAm = $("11");
-var twelvePm = $("12");
-var onePm = $("13");
-var twoPm = $("14");
-var threePm = $("15");
-var fourPm = $("16");
-var fivePm = $("17");
+var nineAm = document.getElementById("9");
+var tenAm = document.getElementById("10");
+var elevenAm = document.getElementById("11");
+var twelvePm = document.getElementById("12");
+var onePm = document.getElementById("13");
+var twoPm = document.getElementById("14");
+var threePm = document.getElementById("15");
+var fourPm = document.getElementById("16");
+var fivePm = document.getElementById("17oclock");
 
 console.log(fivePm)
 
-for (i = 0; i>9; i++) {
-    var blocktime = i + 9;
-    
- if (blocktime < hour) {
-        // classList.add("past");
- }
+var block = [nineAm, tenAm, elevenAm, twelvePm, onePm, twoPm, threePm, fourPm, fivePm];
 
- if (blocktime == hour) {
-        // classList.add("present");
- }
 
- if (blocktime > hour) {
-        //  classList.add("future");
- }
+//  This function checks each timeblock to see if it is in the past, present or future.
+for (i = 0; i<9; i++) {
+    var t = i + 9;
+    var currentblock = block[i];
 
+    console.log(currentblock)
 
     
-}
+
+
+ if (t < hour) {
+      currentblock.classList.add("past");
+ }
+
+ if (t == hour) {
+      currentblock.classList.add("present");
+ }
+
+ if (t > hour) {
+      currentblock.classList.add("future");
+ } }
+
+
+    
