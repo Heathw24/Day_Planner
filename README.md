@@ -14,4 +14,4 @@ Tools used:
 
  https://heathw24.github.io/Day_Planner/
 
- ![Day Planner Screenshot]()
+ ![Day Planner Screenshot](Assets/Images/Screenshot.png)
