@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Tblocks from './timeblock'
+import time from './time.json';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,7 +16,7 @@ ReactDOM.render(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tblocks />
+    {time.map((t) => <Tblocks key={t.id} id={t.id} note={t.note} />)}
   </React.StrictMode>,
   document.getElementById('timeBlocks')
 )

@@ -2,6 +2,8 @@
 import './App.css';
 // import './Script'
 import React from "react";
+import Time from './Date';
+
 
 
 function App() {
@@ -11,7 +13,7 @@ function App() {
     <header className="jumbotron">
       <h1 className="display-3">Work Day Scheduler</h1>
       <p className="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" className="lead"></p>
+      <div id="currentDay" className="lead"><Time /></div>
     </header>
 
     <div className="container" id = "timeBlocks">

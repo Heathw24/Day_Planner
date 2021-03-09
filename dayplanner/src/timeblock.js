@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-const times = ["9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm"];
+const times = ["9 am","10 am","11 am","12 pm","1 pm","2 pm","3 pm","4 pm","5 pm", "6 pm"];
 
 class Tblocks extends Component {
    state = {
@@ -11,7 +11,7 @@ class Tblocks extends Component {
 
   // display saved notes from local storage
 	componentDidMount() {
-		for (var i = 8; i < 17; i++) {
+		for (var i = 0; i < 9; i++) {
 			var displayTodo = localStorage.getItem(i);
 			if (displayTodo && this.props.id === i) {
 				this.setState({
@@ -20,6 +20,7 @@ class Tblocks extends Component {
 				});
 			}
 		}
+        console.log("Look Here");
 	}
 
     // save note to local storage when save button clicked
@@ -59,7 +60,7 @@ class Tblocks extends Component {
         return (
             <div className="row" key={this.props.id}>
             <div className="input-group note">
-                <span className="input-group-text">{this.props.id}:00</span>
+                <span className="input-group-text">{times[this.props.id]}</span>
                 <textarea
                     className="form-control"
                     value={this.state.note}
@@ -68,7 +69,7 @@ class Tblocks extends Component {
                     onChange={this.handleInputChange}
                 />
                 <button type="button" className="btn btn-warning" onClick={this.handleFormSubmit}>
-                    Save
+                <i className="fa fa-folder"></i>
                 </button>
             </div>
         </div>
